@@ -1,8 +1,11 @@
 const parms = new URLSearchParams(window.location.search);
 const category = parms.get("category");
 
-const getproducts = async (category) => {
-    const response = await axios.get(`https://dummyjson.com/products/category/${category}`);
+
+
+
+const getproducts = async (category, sortBy = "title", order = "asc") => {
+    const response = await axios.get(`https://dummyjson.com/products/category/${category}?limit=10&sortBy=${sortBy}&order=${order}`);
 
     const pageTitle = document.querySelector("h1");
     pageTitle.textContent = `${category.toUpperCase()}`;
@@ -34,6 +37,11 @@ const getproducts = async (category) => {
 
     document.querySelector(".products-container").innerHTML = result;
 }
+const sortby = document.querySelector(".sortby");
+sortby.addEventListener("change", (e) => {
+    const [sortBy, order] = e.target.value.split("-");
+    getproducts(category, sortBy, order);
+});
 
 getproducts(category);
 
