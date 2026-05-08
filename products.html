@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="flex-1">
+                <img src="assets/img/logo.png" alt="logo" class="w-10 h-10">
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a><img src="assets/img/icons/info.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main >
+        <section class="bg-base-100 py-10">
+            <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center mb-10 border-b border-gray-200 pb-5">
+                <div>
+                    <h1 class="text-4xl font-extrabold text-black tracking-tight uppercase">Products</h1>
+                    <p class="text-gray-500 mt-2">Discover our premium selection</p>
+                </div>
+                
+                <div class="mt-4 md:mt-0 flex items-center gap-3">
+                    <label class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Sort By</label>
+                    <select class="select select-bordered select-sm rounded-none border-black text-black w-48 focus:outline-none">
+                        <option disabled selected>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Top Rated</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-base-100 min-h-screen py-10">
+            <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 products-container">
+              
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <aside>
+            <img src="assets/img/logo-light.png" alt="logo" class="w-10 h-10">
+            <p class="text-white text-xl  font-bold">
+                Reload
+                <br />
+                Everything you need in one place
+            </p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Social</h6>
+            <div class="grid grid-flow-col gap-4">
+                <a>
+                    <i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255);"></i> </a>
+                <a>
+                    <i class="fa-brands fa-tiktok" style="color: rgb(255, 255, 255);"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-facebook" style="color: rgb(255, 255, 255);"></i>
+                </a>
+            </div>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/products.js"></script>
+</body>
+
+</html>
