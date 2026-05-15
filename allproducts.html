@@ -24,13 +24,28 @@
             </div>
         </div>
     </header>
-    <main class="bg-base-100 min-h-screen py-10">
-        <section class="product">
-        <div class="max-w-7xl mx-auto px-5 product-container">
-            
+    <main >
+        <section class="bg-base-100 py-10">
+            <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center mb-10 border-b border-gray-200 pb-5">
+                <div>
+                    <h1 class="text-4xl font-extrabold text-black tracking-tight uppercase">All Products</h1>
+                </div>
 
-            
-        </div>
+                <div class="mt-4 md:mt-0 flex items-center gap-3">
+                    <label class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Sort By</label>
+                    <select class="sortby select select-bordered select-sm rounded-none border-black text-black w-48 focus:outline-none">
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                        <option value="price-asc">Price (Low to High)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-base-100 min-h-screen py-10">
+            <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 products-container">
+              
+            </div>
         </section>
     </main>
 
@@ -58,7 +73,7 @@
         </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="assets/js/productdetails.js"></script>
+    <script src="assets/js/allproducts.js"></script>
 </body>
 
 </html>
